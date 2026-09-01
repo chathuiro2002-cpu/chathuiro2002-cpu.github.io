@@ -1,110 +1,1237 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Chathumini Irosha Liyanage - IT Undergraduate Portfolio">
 <title>Chathumini Irosha Liyanage | IT Undergraduate</title>
+
 <style>
-:root{--bg:#f7f8fc;--card:#fff;--text:#18202b;--muted:#647084;--primary:#5b5bd6;--primary2:#7b61ff;--line:#e7e9f0;--shadow:0 18px 50px rgba(31,35,55,.10)}
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:21px;font-weight:800}.logo span{color:var(--primary)}
-.navlinks{display:flex;gap:23px}.navlinks a{font-size:14px;color:#4f596a;font-weight:650}.navlinks a:hover{color:var(--primary)}
-.menu{display:none;background:none;border:0;font-size:25px}
-.hero{padding:105px 0 90px;background:linear-gradient(135deg,#f8f7ff,#eef2ff)}
-.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:55px;align-items:center}
-.eyebrow{color:var(--primary);font-weight:800;letter-spacing:1.4px;text-transform:uppercase;font-size:13px}
-h1{font-size:clamp(42px,6.5vw,72px);line-height:1.04;margin:14px 0 18px;letter-spacing:-3px}
-h1 span{color:var(--primary)}.hero h2{font-size:24px;margin:0 0 14px;color:#3e4656}
-.hero p{font-size:18px;color:var(--muted);max-width:730px}
-.buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;padding:12px 19px;border-radius:10px;font-weight:750;border:1px solid var(--line);background:#fff;transition:.2s}.btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}.btn:hover{transform:translateY(-2px)}
-.profile-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:35px;box-shadow:var(--shadow);text-align:center}.avatar{width:145px;height:145px;border-radius:50%;margin:0 auto 18px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;display:grid;place-items:center;font-size:43px;font-weight:850}.profile-card h3{margin:5px 0}.profile-card p{font-size:14px;margin:3px 0;color:var(--muted)}
-section{padding:88px 0}.section-title{font-size:35px;margin:0 0 8px}.section-sub{color:var(--muted);max-width:760px;margin:0 0 32px}
-.about-grid,.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:27px;box-shadow:0 8px 28px rgba(31,35,55,.05)}
-.card h3{margin-top:0}.skills{display:flex;flex-wrap:wrap;gap:10px}.tag{background:#f0efff;color:#4c46a8;border-radius:999px;padding:8px 13px;font-size:13px;font-weight:700}
-.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.project{padding:0;overflow:hidden}.project-top{min-height:160px;background:linear-gradient(135deg,#5b5bd6,#8d70ff);display:flex;align-items:end;padding:22px;color:#fff}.project-top h3{margin:0;font-size:22px;line-height:1.25}.project-body{padding:24px}.project-body p{color:var(--muted)}.tech{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.tech span{font-size:12px;background:#f4f5f8;padding:6px 9px;border-radius:7px}
-.timeline{border-left:2px solid #d9dbeb;padding-left:25px}.item{position:relative;margin-bottom:28px}.item:last-child{margin-bottom:0}.item:before{content:"";position:absolute;left:-33px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--primary)}.item h3{margin:0}.item p{color:var(--muted);margin:4px 0}
-.contact-list{display:grid;gap:12px}.contact-item{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#fff}.contact-item strong{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}.contact-item a{color:var(--primary);font-weight:650}
-footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:14px}
-@media(max-width:760px){.navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:18px 4%;flex-direction:column;gap:14px;border-bottom:1px solid var(--line)}.menu{display:block}.hero-grid,.about-grid,.projects,.contact{grid-template-columns:1fr}.hero{padding-top:70px}section{padding:65px 0}h1{letter-spacing:-2px}.profile-card{max-width:380px;margin:auto}}
+:root{
+    --bg:#f6f8fc;
+    --white:#ffffff;
+    --text:#172033;
+    --muted:#667085;
+    --primary:#5146d8;
+    --primary-dark:#4035b5;
+    --secondary:#7c5cff;
+    --light:#eeedff;
+    --line:#e6e8f0;
+    --success:#16845b;
+    --shadow:0 15px 45px rgba(31,35,55,.08);
+    --shadow-hover:0 20px 55px rgba(31,35,55,.13);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Segoe UI,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+/* NAVIGATION */
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--line);
+}
+
+.nav{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:850;
+    letter-spacing:-.5px;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.navlinks{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+.navlinks a{
+    font-size:14px;
+    color:#505a6d;
+    font-weight:650;
+    transition:.2s;
+}
+
+.navlinks a:hover{
+    color:var(--primary);
+}
+
+.menu{
+    display:none;
+    background:none;
+    border:0;
+    font-size:27px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    padding:105px 0 90px;
+    background:
+        radial-gradient(circle at 85% 15%,rgba(124,92,255,.15),transparent 30%),
+        linear-gradient(135deg,#faf9ff,#eef2ff);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:70px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--light);
+    color:var(--primary);
+    border:1px solid #ddd9ff;
+    padding:7px 13px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.badge::before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--success);
+}
+
+h1{
+    font-size:clamp(43px,6vw,72px);
+    line-height:1.05;
+    letter-spacing:-3px;
+    margin:18px 0 18px;
+}
+
+h1 span{
+    color:var(--primary);
+}
+
+.hero h2{
+    font-size:24px;
+    color:#3d4657;
+    margin-bottom:15px;
+}
+
+.hero-text{
+    max-width:720px;
+    color:var(--muted);
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 19px;
+    border-radius:10px;
+    font-weight:750;
+    font-size:14px;
+    border:1px solid var(--line);
+    background:var(--white);
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(31,35,55,.1);
+}
+
+.btn.primary{
+    background:var(--primary);
+    border-color:var(--primary);
+    color:white;
+}
+
+.btn.primary:hover{
+    background:var(--primary-dark);
+}
+
+/* PROFILE CARD */
+.profile-card{
+    background:rgba(255,255,255,.96);
+    border:1px solid var(--line);
+    border-radius:28px;
+    padding:38px 30px;
+    box-shadow:var(--shadow);
+    text-align:center;
+    transition:.3s;
+}
+
+.profile-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-hover);
+}
+
+.avatar{
+    width:175px;
+    height:175px;
+    margin:0 auto 22px;
+    border-radius:50%;
+    overflow:hidden;
+    padding:5px;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+}
+
+.avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    border-radius:50%;
+    background:white;
+}
+
+.profile-card h3{
+    font-size:21px;
+    margin-bottom:5px;
+}
+
+.profile-card .role{
+    color:var(--primary);
+    font-weight:750;
+}
+
+.profile-card p{
+    font-size:14px;
+    color:var(--muted);
+    margin:3px 0;
+}
+
+/* SECTIONS */
+section{
+    padding:90px 0;
+}
+
+.section-heading{
+    max-width:760px;
+    margin-bottom:35px;
+}
+
+.section-title{
+    font-size:36px;
+    line-height:1.2;
+    margin-bottom:8px;
+    letter-spacing:-1px;
+}
+
+.section-sub{
+    color:var(--muted);
+}
+
+/* ABOUT */
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:28px;
+    box-shadow:0 8px 28px rgba(31,35,55,.045);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+}
+
+.card h3{
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+/* SKILLS */
+.skills-section{
+    background:#fff;
+}
+
+.skill-groups{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.skill-group{
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:23px;
+}
+
+.skill-group h3{
+    font-size:17px;
+    margin-bottom:16px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.tag{
+    background:#eeedff;
+    color:#4c46a8;
+    border-radius:999px;
+    padding:7px 11px;
+    font-size:12px;
+    font-weight:700;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.project{
+    overflow:hidden;
+    padding:0;
+}
+
+.project-top{
+    min-height:170px;
+    background:linear-gradient(135deg,#5146d8,#8065ff);
+    color:white;
+    padding:25px;
+    display:flex;
+    align-items:flex-end;
+    position:relative;
+}
+
+.project-number{
+    position:absolute;
+    top:18px;
+    right:20px;
+    font-size:12px;
+    opacity:.75;
+    font-weight:700;
+}
+
+.project-top h3{
+    font-size:22px;
+    line-height:1.3;
+}
+
+.project-body{
+    padding:25px;
+}
+
+.project-label{
+    color:var(--primary);
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.7px;
+    margin-bottom:8px;
+}
+
+.project-body p{
+    color:var(--muted);
+    margin-bottom:12px;
+}
+
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:18px;
+}
+
+.tech span{
+    font-size:11px;
+    font-weight:700;
+    background:#f3f4f7;
+    padding:6px 9px;
+    border-radius:7px;
+    color:#505a6d;
+}
+
+/* EDUCATION */
+.education{
+    background:#fff;
+}
+
+.timeline{
+    border-left:2px solid #d9dbeb;
+    padding-left:28px;
+    max-width:900px;
+}
+
+.item{
+    position:relative;
+    margin-bottom:32px;
+}
+
+.item:last-child{
+    margin-bottom:0;
+}
+
+.item::before{
+    content:"";
+    position:absolute;
+    left:-36px;
+    top:8px;
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:var(--primary);
+    border:3px solid #fff;
+    box-shadow:0 0 0 2px var(--primary);
+}
+
+.item h3{
+    margin-bottom:4px;
+}
+
+.item .date{
+    color:var(--primary);
+    font-weight:750;
+    font-size:14px;
+}
+
+.item p{
+    color:var(--muted);
+    margin-top:5px;
+}
+
+/* STRENGTHS */
+.strength-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.strength-list{
+    display:grid;
+    gap:12px;
+}
+
+.strength{
+    padding:13px 15px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:#fff;
+    font-weight:650;
+}
+
+/* CONTACT */
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-list{
+    display:grid;
+    gap:12px;
+}
+
+.contact-item{
+    padding:15px 16px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:#fff;
+}
+
+.contact-item strong{
+    display:block;
+    font-size:11px;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:.8px;
+    margin-bottom:3px;
+}
+
+.contact-item a{
+    color:var(--primary);
+    font-weight:650;
+    word-break:break-word;
+}
+
+.availability{
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 10px;
+    background:#e8f8f1;
+    color:var(--success);
+    border-radius:999px;
+    font-size:12px;
+    font-weight:750;
+}
+
+/* FOOTER */
+footer{
+    padding:30px 0;
+    border-top:1px solid var(--line);
+    background:#fff;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+    .navlinks{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        background:#fff;
+        padding:20px 4%;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+        border-bottom:1px solid var(--line);
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        padding:75px 0 65px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .hero-text{
+        margin:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .profile-card{
+        max-width:390px;
+        margin:auto;
+    }
+
+    .about-grid,
+    .strength-grid,
+    .contact,
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .skill-groups{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:65px 0;
+    }
+
+    h1{
+        font-size:43px;
+        letter-spacing:-2px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .avatar{
+        width:155px;
+        height:155px;
+    }
+}
 </style>
+
 </head>
+
 <body>
-<nav><div class="container nav">
-<a class="logo" href="#home">Chathumini<span>.</span></a>
-<div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#strengths">Strengths</a><a href="#contact">Contact</a></div>
-<button class="menu" aria-label="Open menu" onclick="const n=document.querySelector('.navlinks');n.style.display=n.style.display==='flex'?'none':'flex'">☰</button>
-</div></nav>
 
-<header class="hero" id="home"><div class="container hero-grid">
-<div>
-<div class="eyebrow">IT Undergraduate • Software Development</div>
-<h1>Chathumini <span>Irosha Liyanage</span></h1>
-<h2>HNDIT Undergraduate</h2>
-<p>Motivated Information Technology undergraduate with practical academic experience in software and web application development. I enjoy building practical solutions using programming, databases and software engineering concepts.</p>
-<div class="buttons"><a class="btn primary" href="#projects">View Projects</a><a class="btn" href="cv.pdf" download>Download CV</a><a class="btn" href="#contact">Contact Me</a></div>
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container nav">
+
+<a class="logo" href="#home">
+    Chathumini<span>.</span>
+</a>
+
+<div class="navlinks" id="navlinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#strengths">Strengths</a>
+    <a href="#contact">Contact</a>
 </div>
-<div class="profile-card"><div class="avatar">CIL</div><h3>Chathumini Irosha Liyanage</h3><p>IT Undergraduate</p><p>HNDIT • SLIATE</p><p>Sri Lanka</p></div>
-</div></header>
 
-<section id="about"><div class="container">
+<button class="menu" aria-label="Open menu"
+onclick="const n=document.getElementById('navlinks');n.style.display=n.style.display==='flex'?'none':'flex'">
+☰ </button>
+
+</div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div class="hero-content">
+
+<div class="badge">
+Open to Internship Opportunities
+</div>
+
+<h1>
+Chathumini <span>Irosha Liyanage</span>
+</h1>
+
+<h2>
+HNDIT Undergraduate | Aspiring Software Developer
+</h2>
+
+<p class="hero-text">
+Motivated Information Technology undergraduate with practical experience
+in software and web application development. I enjoy creating practical
+solutions using programming, databases and software engineering concepts.
+I am eager to learn, grow and contribute to real-world IT projects.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="#projects">
+View My Projects
+</a>
+
+<a class="btn" href="cv.pdf" download>
+Download CV
+</a>
+
+<a class="btn" href="#contact">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+<div class="profile-card">
+
+<div class="avatar">
+<img src="profile.jpg" alt="Professional profile photo of Chathumini Irosha Liyanage">
+</div>
+
+<h3>Chathumini Irosha Liyanage</h3>
+
+<p class="role">IT Undergraduate</p>
+
+<p>HNDIT • SLIATE</p>
+
+<p>Sri Lanka</p>
+
+</div>
+
+</div>
+</header>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-heading">
 <h2 class="section-title">About Me</h2>
-<p class="section-sub">I am seeking an internship opportunity to apply my programming, database management and problem-solving skills in a professional environment.</p>
+
+<p class="section-sub">
+A passionate IT undergraduate interested in software development,
+web technologies and database-driven applications.
+</p>
+</div>
+
 <div class="about-grid">
-<div class="card"><h3>Professional Summary</h3><p>HNDIT undergraduate with knowledge of Java, PHP, JavaScript, HTML, CSS and MySQL. Developed a Smart Hospital &amp; Pharmacy Management System as a final project, covering hospital reception, doctor checking and pharmacy management processes. Also developed a Hotel Management System using NetBeans.</p></div>
-<div class="card"><h3>Career Interest</h3><p>I am interested in software development and opportunities where I can apply my IT knowledge, learn new technologies, strengthen my practical skills and contribute to real-world software projects.</p></div>
-</div></div></section>
 
-<section id="skills"><div class="container">
-<h2 class="section-title">Technical Skills</h2><p class="section-sub">Technologies and technical areas developed through academic coursework and software projects.</p>
-<div class="card skills">
-<span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">C++</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">MySQL</span><span class="tag">NetBeans</span><span class="tag">VS Code</span><span class="tag">Object-Oriented Programming</span><span class="tag">Software Engineering</span><span class="tag">Database Management</span><span class="tag">Software Quality Assurance</span>
-</div></div></section>
+<div class="card">
 
-<section id="projects"><div class="container">
-<h2 class="section-title">Projects</h2><p class="section-sub">Academic projects demonstrating software development, database and problem-solving skills.</p>
+<h3>Professional Summary</h3>
+
+<p>
+I am an HNDIT undergraduate with knowledge and practical experience
+in Java, PHP, JavaScript, HTML, CSS and MySQL. Through academic
+projects, I have developed my understanding of software development,
+database management, object-oriented programming and software
+engineering practices.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Career Objective</h3>
+
+<p>
+I am seeking an internship opportunity in the IT industry where I can
+apply my technical knowledge, develop professional experience,
+learn modern technologies and contribute positively to a software
+development team.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="skills-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<p class="section-sub">
+Technologies and technical areas developed through academic
+coursework and practical software projects.
+</p>
+
+</div>
+
+<div class="skill-groups">
+
+<div class="skill-group">
+
+<h3>Programming</h3>
+
+<div class="skills">
+<span class="tag">Java</span>
+<span class="tag">PHP</span>
+<span class="tag">JavaScript</span>
+<span class="tag">C++</span>
+</div>
+
+</div>
+
+<div class="skill-group">
+
+<h3>Web Technologies</h3>
+
+<div class="skills">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+<span class="tag">Bootstrap</span>
+</div>
+
+</div>
+
+<div class="skill-group">
+
+<h3>Database & Tools</h3>
+
+<div class="skills">
+<span class="tag">MySQL</span>
+<span class="tag">XAMPP</span>
+<span class="tag">NetBeans</span>
+<span class="tag">VS Code</span>
+</div>
+
+</div>
+
+<div class="skill-group">
+
+<h3>Software Development</h3>
+
+<div class="skills">
+<span class="tag">OOP</span>
+<span class="tag">Software Engineering</span>
+<span class="tag">Database Management</span>
+<span class="tag">Web Development</span>
+</div>
+
+</div>
+
+<div class="skill-group">
+
+<h3>Quality & Testing</h3>
+
+<div class="skills">
+<span class="tag">Software Quality Assurance</span>
+<span class="tag">Software Testing</span>
+<span class="tag">Problem Solving</span>
+</div>
+
+</div>
+
+<div class="skill-group">
+
+<h3>Professional Skills</h3>
+
+<div class="skills">
+<span class="tag">Teamwork</span>
+<span class="tag">Communication</span>
+<span class="tag">Analytical Thinking</span>
+<span class="tag">Fast Learning</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<p class="section-sub">
+Academic projects demonstrating my programming, database,
+software engineering and problem-solving abilities.
+</p>
+
+</div>
+
 <div class="projects">
-<div class="card project"><div class="project-top"><h3>Smart Hospital &amp; Pharmacy Management System</h3></div><div class="project-body">
-<p><strong>Final Year Project</strong></p><p>Developed a management system covering hospital reception, doctor checking and pharmacy management processes. Implemented patient, appointment, doctor, prescription and pharmacy operations, with a MySQL database supporting hospital and pharmacy-related data.</p><p>Developed web-based interfaces and applied software engineering, database management and object-oriented programming concepts throughout the project.</p>
-<div class="tech"><span>Java</span><span>PHP</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span></div>
-</div></div>
-<div class="card project"><div class="project-top"><h3>Hotel Management System</h3></div><div class="project-body">
-<p><strong>Academic Project</strong></p><p>Developed a hotel management application using Java and NetBeans. Applied object-oriented programming concepts to organize the application structure and functionality and implemented functionality to support hotel management operations.</p>
-<div class="tech"><span>Java</span><span>NetBeans</span></div>
-</div></div>
-</div></div></section>
 
-<section id="education"><div class="container">
-<h2 class="section-title">Education</h2><p class="section-sub">Academic background and relevant IT studies.</p>
+<!-- PROJECT 1 -->
+
+<div class="card project">
+
+<div class="project-top">
+
+<span class="project-number">01</span>
+
+<h3>
+Smart Hospital &amp; Pharmacy Management System
+</h3>
+
+</div>
+
+<div class="project-body">
+
+<div class="project-label">
+Final Year Project
+</div>
+
+<p>
+Developed a management system covering hospital reception,
+doctor checking and pharmacy management processes.
+</p>
+
+<p>
+The system includes patient registration, appointment management,
+doctor management, prescriptions, pharmacy queues, medicine
+inventory and low-stock monitoring.
+</p>
+
+<p>
+The project applies database management, software engineering,
+object-oriented programming and web development concepts.
+</p>
+
+<div class="tech">
+<span>Java</span>
+<span>PHP</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>MySQL</span>
+<span>XAMPP</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- PROJECT 2 -->
+
+<div class="card project">
+
+<div class="project-top">
+
+<span class="project-number">02</span>
+
+<h3>
+Hotel Management System
+</h3>
+
+</div>
+
+<div class="project-body">
+
+<div class="project-label">
+Academic Project
+</div>
+
+<p>
+Developed a hotel management application using Java and NetBeans.
+</p>
+
+<p>
+Applied object-oriented programming concepts to structure the
+application and implement functionality for managing hotel
+operations.
+</p>
+
+<p>
+This project strengthened my understanding of Java programming,
+application design and software development practices.
+</p>
+
+<div class="tech">
+<span>Java</span>
+<span>NetBeans</span>
+<span>OOP</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education" class="education">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2 class="section-title">Education</h2>
+
+<p class="section-sub">
+My academic background and Information Technology studies.
+</p>
+
+</div>
+
 <div class="card timeline">
-<div class="item"><h3>Sri Lanka Institute of Advanced Technological Education</h3><p><strong>Higher National Diploma in Information Technology (HNDIT)</strong> • Aug 2024 – Present</p><p>Relevant coursework: Object-Oriented Programming, Software Engineering, Database Management Systems, Web Development and Quality Assurance.</p></div>
-<div class="item"><h3>Ke/Dhehi/Rajasinghe Central College, Ruwanwella</h3><p><strong>G.C.E. Advanced Level Examination – Arts Stream</strong> • 2022</p></div>
-<div class="item"><h3>Dr. N. M. Perera Central College, Yatiyantota</h3><p><strong>G.C.E. Ordinary Level Examination</strong> • 2018</p></div>
-</div></div></section>
 
-<section id="strengths"><div class="container">
-<h2 class="section-title">Core Strengths &amp; Languages</h2>
-<div class="about-grid">
-<div class="card skills"><span class="tag">Problem Solving</span><span class="tag">Analytical Thinking</span><span class="tag">Teamwork</span><span class="tag">Communication</span><span class="tag">Ability to Learn New Technologies</span></div>
-<div class="card"><h3>Languages</h3><p><strong>Sinhala:</strong> Native</p><p><strong>English:</strong> Excellent / Professional Working Proficiency</p></div>
-</div></div></section>
+<div class="item">
 
-<section id="contact"><div class="container">
-<h2 class="section-title">Let's Connect</h2><p class="section-sub">I am open to internship opportunities and professional connections in software development and IT.</p>
+<h3>
+Sri Lanka Institute of Advanced Technological Education
+</h3>
+
+<div class="date">
+Higher National Diploma in Information Technology • Aug 2024 – Present
+</div>
+
+<p>
+Relevant areas of study include Object-Oriented Programming,
+Software Engineering, Database Management Systems, Web Development
+and Software Quality Assurance.
+</p>
+
+</div>
+
+<div class="item">
+
+<h3>
+Ke/Dhehi/Rajasinghe Central College, Ruwanwella
+</h3>
+
+<div class="date">
+G.C.E. Advanced Level Examination – Arts Stream • 2022
+</div>
+
+</div>
+
+<div class="item">
+
+<h3>
+Dr. N. M. Perera Central College, Yatiyantota
+</h3>
+
+<div class="date">
+G.C.E. Ordinary Level Examination • 2018
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STRENGTHS -->
+
+<section id="strengths">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2 class="section-title">
+Core Strengths &amp; Languages
+</h2>
+
+<p class="section-sub">
+Personal qualities and communication skills that I bring to a
+professional working environment.
+</p>
+
+</div>
+
+<div class="strength-grid">
+
+<div class="card">
+
+<h3>Core Strengths</h3>
+
+<div class="strength-list">
+
+<div class="strength">
+Problem Solving
+</div>
+
+<div class="strength">
+Analytical Thinking
+</div>
+
+<div class="strength">
+Teamwork &amp; Collaboration
+</div>
+
+<div class="strength">
+Communication
+</div>
+
+<div class="strength">
+Ability to Learn New Technologies
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Languages</h3>
+
+<div class="strength-list">
+
+<div class="strength">
+<strong>Sinhala</strong> — Native
+</div>
+
+<div class="strength">
+<strong>English</strong> — Excellent / Professional Working Proficiency
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="skills-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2 class="section-title">
+Let's Connect
+</h2>
+
+<p class="section-sub">
+I am open to internship opportunities and professional connections
+in software development and Information Technology.
+</p>
+
+</div>
+
 <div class="contact">
-<div class="card"><h3>Contact Information</h3><div class="contact-list">
-<div class="contact-item"><strong>Email</strong><a href="mailto:chathu.iro2002@gmail.com">chathu.iro2002@gmail.com</a></div>
-<div class="contact-item"><strong>Phone</strong><a href="tel:+94752130144">+94 752130144</a></div>
-<div class="contact-item"><strong>LinkedIn</strong><a href="https://linkedin.com/in/chathumini-irosha-liyanage-313290344" target="_blank" rel="noopener">View LinkedIn Profile</a></div>
-</div></div>
-<div class="card"><h3>Internship Opportunity</h3><p>I am looking for an internship opportunity where I can apply my programming, database management and problem-solving skills while gaining professional experience.</p><a class="btn primary" href="mailto:chathu.iro2002@gmail.com">Email Me</a></div>
-</div></div></section>
 
-<footer><div class="container">© <span id="year"></span> Chathumini Irosha Liyanage. All rights reserved.</div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<div class="card">
+
+<h3>Contact Information</h3>
+
+<div class="contact-list">
+
+<div class="contact-item">
+
+<strong>Email</strong>
+
+<a href="mailto:chathu.iro2002@gmail.com">
+chathu.iro2002@gmail.com
+</a>
+
+</div>
+
+<div class="contact-item">
+
+<strong>Phone</strong>
+
+<a href="tel:+94752130144">
++94 752130144
+</a>
+
+</div>
+
+<div class="contact-item">
+
+<strong>LinkedIn</strong>
+
+<a href="https://linkedin.com/in/chathumini-irosha-liyanage-313290344"
+target="_blank"
+rel="noopener">
+View LinkedIn Profile </a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Looking for an IT Internship?</h3>
+
+<p>
+I am interested in opportunities where I can apply my programming,
+database management and problem-solving skills while gaining
+valuable professional experience.
+</p>
+
+<span class="availability">
+● Available for Internship Opportunities
+</span>
+
+<div class="buttons">
+
+<a class="btn primary"
+href="mailto:chathu.iro2002@gmail.com">
+Email Me </a>
+
+<a class="btn"
+href="cv.pdf"
+download>
+View My CV </a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+© <span id="year"></span>
+Chathumini Irosha Liyanage.
+All rights reserved.
+
+</div>
+
+</footer>
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
 </body>
 </html>
