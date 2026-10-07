@@ -4,7 +4,7 @@ This is a GitHub Pages-ready personal portfolio website.
 
 ## Files
 - `index.html` — complete responsive portfolio website
-- `cv.pdf` — add your final CV PDF here (the Download CV button already points to it)
+- `CV.pdf` — add your final CV PDF here (the Download CV button already points to it)
 
 ## Publish with GitHub Pages
 
